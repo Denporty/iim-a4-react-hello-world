@@ -6,10 +6,9 @@ cache:
     - node_modules
 script:
   - yarn test --watchAll=false
-  - yarn build
 on:
   branch: master
 deploy:
   provider: heroku
-  api_key: 52f21c14-e4c4-491c-999c-2a83510b1a59
-  app: devopsa4
+  api_key: $HEROKU_KEY
+  app: $HEROKU_APP
